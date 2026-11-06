@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NetShield 公共网络加密</string>
+    <string name="enabled">总开关（Hook 生效的前提）</string>
+    <string name="always_on">始终开启（任何网络都强制加密，不仅公共 Wi-Fi）</string>
+    <string name="force_https">强制 HTTPS（自动把 http:// 改写为 https://）</string>
+    <string name="block_plain">拦截明文连接（禁止应用向 80 端口发起明文请求）</string>
+    <string name="use_doh">DNS 加密（DNS 查询改走 DoH，防止域名被嗅探）</string>
+    <string name="doh_provider">DoH 服务器</string>
+    <string name="custom_doh_item">自定义 DoH 服务器…</string>
+    <string name="custom_doh_title">自定义服务器地址（需为 HTTPS 的 JSON 风格 DoH 接口，与 Cloudflare/Google 格式兼容）</string>
+    <string name="custom_doh_hint">https://dns.example.com/dns-query</string>
+    <string name="module_desc">公共 Wi-Fi 下强制应用走 HTTPS、拦截明文 socket、DNS 改走 DoH 加密查询</string>
+    <string name="debug_log">调试日志（记录每次改写/拦截/DoH 解析，到 LSPosed 日志搜 NetShield 查看）</string>
+    <string name="add_trusted">把当前 Wi-Fi 加入白名单</string>
+    <string name="clear_trusted">清空白名单</string>
+    <string name="trusted_title">受信任的 Wi-Fi（这些网络不强制加密）</string>
+    <string name="trusted_fmt">受信任 Wi-Fi：%1$s</string>
+    <string name="status_title">当前状态</string>
+    <string name="status_fmt">保护判定：%1$s\n当前网络读取到的 SSID：%2$s</string>
+    <string name="hint_ssid">Wi-Fi 名称（SSID）</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="notice">说明：工作原理是通过 LSPosed 钩子在被保护应用内强制 TLS / DoH，需在 LSPosed 中勾选要保护的应用（如浏览器、聊天工具、支付类 App）。被杀后台或状态陈旧时保护会自动退出，以避免误伤。</string>
+</resources>
